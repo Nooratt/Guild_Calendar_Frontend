@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.App {
+  text-align: center;
+  font-family: 'Oswald';
+  background-color: #190f23;
+}
+body {
+  background-color: #190f23;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+h1{
+  font-size: 50px;
+  color:white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+  justify-content: center;
+}
+
+.container2 {
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.fc-media-screen{
+  padding: 15px;
+  margin:10px;
+  border-radius: 10px;
+  background-color: rgba(52, 35, 70, 0.927);
+  color: rgb(255, 255, 255);
+  
+}
+
+.guild-name{
+  font-size: 30px;
+}
+
+.TIK{
+  background-image: url('./images/TiK-logo.png') ;
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.AK{
+  background-image: url('./images/ak-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+.AS{
+  background-image: url('./images/aswhite.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+.Athene{
+  background-image: url('./images/athene-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+.FK{
+  background-image: url('./images/fk-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.IK{
+  background-image: url('./images/IK_logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.Inkubio{
+  background-image: url('./images/inkulogo-musta.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 50px 40px;
+}
+.KIK{
+  background-image: url('./images/kik-logo-round.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.MK{
+  background-image: url('./images/MK-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+.PJK{
+  background-image: url('./images/PJK-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.Prodeko{
+  background-image: url('./images/prodeko-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.PT{
+  background-image: url('./images/PT-logo-green.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.TF{
+  background-image: url('./images/tf_logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+.VK{
+  background-image: url('./images/vk-logo.png');
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="container"] {
+    display: contents;
+  }
+  [class*="fc-media-screen"] {
+    width:95%;
+    
+  }
+}
+.container > div{
+  max-width:32%;
+  min-width:400px;
+}
+
+.fc-day-today{
+  background-color: rgba(118, 103, 134, 0.927) !important;
+}
+
+
+.fc-button-primary{
+  background-color: rgba(118, 103, 134, 0.927) !important;
+}
+
+.fc-timegrid-event{
+  margin-left:auto;
+  margin-right:auto;
+  min-height:30px;
+  margin:2px;
+}
+
+.fc-daygrid-event{
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  white-space: normal !important; 
+  min-height:40px;
+  margin:2px;
+  
+}
+
+.fc-event-title{
+  font-size: medium;
+}
+
+.sorting-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sorting-list-item {
+  float: left;
+  clear: both;
+  color: white;
+  accent-color: #9b59b6;
+}
+.fc-timeGridDay-view, .fc-timegrid{
+  border-radius: 4px;
+}
+
+.swal-modal{
+  width: 50%;
+  background-color:rgb(76, 68, 131);
+}
+.swal-modal button{
+  background-color: #9b59b6;
+  font-family: 'Oswald';
+}
+.swal-text, .swal-title{
+  color:white;
+  font-family: 'Oswald';
+  width: 90%;
+}
+
