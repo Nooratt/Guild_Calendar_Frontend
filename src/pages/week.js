@@ -47,7 +47,6 @@ const Week = () => {
 
   React.useEffect(() => {
     fetchData(guilds);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function getNext4MonthsEvents() {
