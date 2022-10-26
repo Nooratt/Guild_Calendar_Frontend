@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.7eda7fef.js",
+    "main.css": "/static/css/main.012fb833.css",
+    "main.js": "/static/js/main.ba0be8cb.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
+    "static/media/TiK-logo.png": "/static/media/TiK-logo.10dcddc8cd6919381896.png",
+    "static/media/IK_logo.png": "/static/media/IK_logo.683cda5e16ffee940eb1.png",
+    "static/media/inkulogo-musta.png": "/static/media/inkulogo-musta.a54e6a4a18fc5e4216b6.png",
+    "static/media/PJK-logo.png": "/static/media/PJK-logo.724f678cf7ffef0f6559.png",
+    "static/media/PT-logo-green.png": "/static/media/PT-logo-green.cd03b52a6a0b1b69fc01.png",
+    "static/media/kik-logo-round.png": "/static/media/kik-logo-round.ac2354af1790d2f1d1f6.png",
+    "static/media/athene-logo.png": "/static/media/athene-logo.1b8e96e6430cf693a5db.png",
+    "static/media/ak-logo.png": "/static/media/ak-logo.9c5e7f6f6323dfe3c6bb.png",
+    "static/media/fk-logo.png": "/static/media/fk-logo.c45469a067af130d5552.png",
+    "static/media/prodeko-logo.png": "/static/media/prodeko-logo.2f9849544c52a3c02d3e.png",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.7eda7fef.js.map": "/static/js/main.7eda7fef.js.map",
+    "main.012fb833.css.map": "/static/css/main.012fb833.css.map",
+    "main.ba0be8cb.js.map": "/static/js/main.ba0be8cb.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7eda7fef.js"
+    "static/css/main.012fb833.css",
+    "static/js/main.ba0be8cb.js"
   ]
 }

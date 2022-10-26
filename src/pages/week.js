@@ -19,7 +19,7 @@ const Week = () => {
     try {
       await Promise.all([
         (
-          await fetch("/events", {
+          await fetch("https://whatsthehaps-api.azurewebsites.net/events", {
             method: 'POST',
             body: JSON.stringify({
               guildNames: guilds,

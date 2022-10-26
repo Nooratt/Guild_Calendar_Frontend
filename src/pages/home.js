@@ -6,20 +6,17 @@ import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import swal from 'sweetalert';
 
-
-
 const Home = () => {
 
   const [error, setError] = React.useState(false);
   const [response, setResponse] = React.useState([]);
 
- 
   async function fetchData() {
     try {
       const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'VK', 'Prodeko', 'FK'];
       await Promise.all([
        (
-         await fetch("/events", {
+         await fetch("https://whatsthehaps-api.azurewebsites.net/events", {
           method: 'POST',
           body: JSON.stringify({
             guildNames: guilds,
