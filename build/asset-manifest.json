@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.012fb833.css",
-    "main.js": "/static/js/main.ba0be8cb.js",
+    "main.js": "/static/js/main.742525db.js",
     "static/js/787.dd6ac539.chunk.js": "/static/js/787.dd6ac539.chunk.js",
     "static/media/TiK-logo.png": "/static/media/TiK-logo.10dcddc8cd6919381896.png",
     "static/media/IK_logo.png": "/static/media/IK_logo.683cda5e16ffee940eb1.png",
@@ -15,11 +15,11 @@
     "static/media/prodeko-logo.png": "/static/media/prodeko-logo.2f9849544c52a3c02d3e.png",
     "index.html": "/index.html",
     "main.012fb833.css.map": "/static/css/main.012fb833.css.map",
-    "main.ba0be8cb.js.map": "/static/js/main.ba0be8cb.js.map",
+    "main.742525db.js.map": "/static/js/main.742525db.js.map",
     "787.dd6ac539.chunk.js.map": "/static/js/787.dd6ac539.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.012fb833.css",
-    "static/js/main.ba0be8cb.js"
+    "static/js/main.742525db.js"
   ]
 }

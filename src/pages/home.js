@@ -39,6 +39,7 @@ const Home = () => {
  
  React.useEffect(() => {
    fetchData();
+ // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
 
  function getNext4MonthsEvents(){
