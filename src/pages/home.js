@@ -14,15 +14,13 @@ const Home = () => {
   async function fetchData() {
     try {
       const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'VK', 'Prodeko', 'FK'];
+      const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
+      const startDateTimeQuery = `startDateTimeFrame=${new Date().toISOString()}`;
+      const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
       await Promise.all([
        (
-         await fetch("https://whatsthehaps-api.azurewebsites.net/events", {
-          method: 'POST',
-          body: JSON.stringify({
-            guildNames: guilds,
-            startDateTimeFrame : new Date(),
-            endDateTimeFrame : getNext4MonthsEvents()
-          }),
+         await fetch(`https://apim-whatsthehaps.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
+          method: 'GET',
           headers: {'Content-type': 'application/json; charset=UTF-8'},
         }).then((res) => res.json())
         .then((data) => {

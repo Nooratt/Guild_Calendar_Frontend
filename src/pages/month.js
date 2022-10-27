@@ -14,17 +14,15 @@ const Month = () => {
     const [filtered, setFiltered] = React.useState([]);
     const [checkedState, setCheckedState] = React.useState(new Array(guilds.length).fill(true));
 
+    const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
+    const startDateTimeQuery = `startDateTimeFrame=${getOneMonthFromNowEvents()}`;
+    const endDateTimeQuery = `endDateTimeFrame=${getNext3MonthsEvents()}`;
     async function fetchData() {
         try {
             await Promise.all([
                 (
-                    await fetch("https://whatsthehaps-api.azurewebsites.net/events", {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            guildNames: guilds,
-                            startDateTimeFrame: getOneMonthFromNowEvents(),
-                            endDateTimeFrame: getNext3MonthsEvents()
-                        }),
+                    await fetch(`https://apim-whatsthehaps.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
+                        method: 'GET',
                         headers: { 'Content-type': 'application/json; charset=UTF-8' },
                     }).then((res) => res.json())
                         .then((data) => {
