@@ -6,26 +6,21 @@ import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import swal from 'sweetalert';
 
-
-
 const Home = () => {
 
   const [error, setError] = React.useState(false);
   const [response, setResponse] = React.useState([]);
 
- 
   async function fetchData() {
     try {
       const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'VK', 'Prodeko', 'FK'];
+      const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
+      const startDateTimeQuery = `startDateTimeFrame=${new Date().toISOString()}`;
+      const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
       await Promise.all([
        (
-         await fetch("/events", {
-          method: 'POST',
-          body: JSON.stringify({
-            guildNames: guilds,
-            startDateTimeFrame : new Date(),
-            endDateTimeFrame : getNext4MonthsEvents()
-          }),
+         await fetch(`https://apim-whatsthehaps.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
+          method: 'GET',
           headers: {'Content-type': 'application/json; charset=UTF-8'},
         }).then((res) => res.json())
         .then((data) => {
@@ -42,6 +37,7 @@ const Home = () => {
  
  React.useEffect(() => {
    fetchData();
+ // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
 
  function getNext4MonthsEvents(){
