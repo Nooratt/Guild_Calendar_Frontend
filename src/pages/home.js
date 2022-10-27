@@ -12,10 +12,14 @@ const Home = () => {
   const [response, setResponse] = React.useState([]);
 
   async function fetchData() {
+    var date = new Date();
+    date.setMinutes(0);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
     try {
       const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'VK', 'Prodeko', 'FK'];
       const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
-      const startDateTimeQuery = `startDateTimeFrame=${new Date().toISOString()}`;
+      const startDateTimeQuery = `startDateTimeFrame=${date.toISOString()}`;
       const endDateTimeQuery = `endDateTimeFrame=${getNext4MonthsEvents()}`;
       await Promise.all([
        (

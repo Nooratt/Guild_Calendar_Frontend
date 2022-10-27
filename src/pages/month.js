@@ -50,6 +50,9 @@ const Month = () => {
 
     function getNext3MonthsEvents() {
         var date = new Date();
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
         date.setMonth(date.getMonth() + 3);
         return date.toISOString();
     }
@@ -69,6 +72,9 @@ const Month = () => {
 
     function getOneMonthFromNowEvents() {
         var date = new Date();
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
         date.setDate(date.getDate() - 31);
         return date.toISOString();
     }

@@ -49,12 +49,18 @@ const Week = () => {
 
   function getNext4MonthsEvents() {
     var date = new Date();
+    date.setMinutes(0);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
     date.setMonth(date.getMonth() + 4);
     return date.toISOString();
   }
 
   function get10DaysFromNowEvents() {
     var date = new Date();
+    date.setMinutes(0);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
     date.setDate(date.getDate() - 10);
     return date.toISOString();
   }
