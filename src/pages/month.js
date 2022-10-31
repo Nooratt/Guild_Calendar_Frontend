@@ -14,17 +14,15 @@ const Month = () => {
     const [filtered, setFiltered] = React.useState([]);
     const [checkedState, setCheckedState] = React.useState(new Array(guilds.length).fill(true));
 
+    const guildQuery = guilds.map(g => `guildNames=${g}`).join('&');
+    const startDateTimeQuery = `startDateTimeFrame=${getOneMonthFromNowEvents()}`;
+    const endDateTimeQuery = `endDateTimeFrame=${getNext3MonthsEvents()}`;
     async function fetchData() {
         try {
             await Promise.all([
                 (
-                    await fetch("/events", {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            guildNames: guilds,
-                            startDateTimeFrame: getOneMonthFromNowEvents(),
-                            endDateTimeFrame: getNext3MonthsEvents()
-                        }),
+                    await fetch(`https://apim-whatsthehaps.azure-api.net/v1/events?${guildQuery}&${startDateTimeQuery}&${endDateTimeQuery}`, {
+                        method: 'GET',
                         headers: { 'Content-type': 'application/json; charset=UTF-8' },
                     }).then((res) => res.json())
                         .then((data) => {
@@ -47,10 +45,14 @@ const Month = () => {
 
     React.useEffect(() => {
         fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function getNext3MonthsEvents() {
         var date = new Date();
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
         date.setMonth(date.getMonth() + 3);
         return date.toISOString();
     }
@@ -70,6 +72,9 @@ const Month = () => {
 
     function getOneMonthFromNowEvents() {
         var date = new Date();
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
         date.setDate(date.getDate() - 31);
         return date.toISOString();
     }

@@ -2,7 +2,7 @@
   "name": "amplifyapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://whatsthehaps-api.azurewebsites.net",
   "dependencies": {
     "@fullcalendar/core": "^5.11.3",
     "@fullcalendar/daygrid": "^5.11.3",
