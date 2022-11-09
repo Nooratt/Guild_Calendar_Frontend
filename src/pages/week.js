@@ -5,7 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
 import '../components/Navbar/NavStyles.css';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 const Week = () => {
 
@@ -79,7 +79,7 @@ const Week = () => {
     )
   }
 
-  const handleChange = (position, name) => {
+  function handleChange(position, name) {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
     );
@@ -99,35 +99,38 @@ const Week = () => {
   return (
 
     <div className='container2'>
-      <div>
-        <ul className="sorting-list">
-          {guilds.map((name, index) => {
-            return (
-              <li key={index}>
-                <div className="sorting-list-item">
-                  <div>
-                    <input
-                      type="checkbox"
-                      id={`custom-checkbox-${index}`}
-                      name={name}
-                      value={name}
-                      checked={checkedState[index]}
-                      onChange={() => handleChange(index, name)}
-                    />
-                    <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      
       <FullCalendar
         customButtons={{
           filterDropdown: {
             text: 'Filter',
             click: function(){
-              alert('clicked the custom button!');
+              Swal.fire({
+                title: "Filter events by guild",
+                html:'<div>'+
+                '<ul className="sorting-list" style="list-style: none;">'+ guilds.map((name, index) => {
+                    return (
+                      '<li key='+ index +'>'+
+                        '<div className="sorting-list-item">'+
+                          '<div>'+
+                            '<input'+
+                              ' type="checkbox"'+
+                              ' id={custom-checkbox-' + index +'}'+
+                              ' name='+name+
+                              ' value='+name+
+                              ' checked='+checkedState[index]+
+                              ' onChange=' + handleChange(index, name)+
+                    
+                            '/>'+
+                            '<label htmlFor={`custom-checkbox-' + index +'}>'+name+'</label>'+
+                          '</div>'+
+                        '</div>'+
+                      '</li>'
+                    );
+                  }) +
+                '</ul>'+
+              '</div>'
+              })
             }
         }
         }}
@@ -158,12 +161,12 @@ const Week = () => {
 
         nowIndicator={true}
         eventClick={(e) => {
-          swal({
+          Swal.fire({
             title: e.event.title,
-            text: "Starting from: " + e.event.start +
-            "\n Description: " + e.event.extendedProps.description +
-            "\n Location: " + e.event.extendedProps.location +
-            "\n Organizer: " + e.event.extendedProps.guild
+            html: "Starting from: " + e.event.start+ "<br>"+
+            "<br>Description: " + e.event.extendedProps.description + "<br>"+ 
+            "<br> Location: " + e.event.extendedProps.location + "<br>"+
+            "<br>Organizer: " + e.event.extendedProps.guild
           })               
         }}
         timeZone="Europe/Helsinki"

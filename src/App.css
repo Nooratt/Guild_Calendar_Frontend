@@ -82,7 +82,7 @@ h1{
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  opacity: 0.7;
+  opacity: 0.8;
   
   
 }
@@ -251,13 +251,16 @@ h1{
   border-radius: 4px;
 }
 
-.swal-modal{
-  width: 50%;
+.swal2-popup{
+  width: 50% !important;
   background-color:rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  font-family: 'Oswald' !important;
+  
 }
-.swal-modal button{
-  background-color: rgb(65 194 157);
-  font-family: 'Oswald';
+.swal2-popup button{
+  background-color: rgb(65 194 157) !important;
+  font-family: 'Oswald' !important;
 }
 .swal-text, .swal-title{
   color:rgb(0, 0, 0);
