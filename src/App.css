@@ -4,15 +4,23 @@
 .App {
   text-align: center;
   font-family: 'Oswald';
-  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
+  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E );
   background-repeat: no-repeat;
   background-position: absolute;
   background-attachment: fixed;
+  min-height: 100%;
 }
 body {
   background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 .App-logo {
@@ -58,8 +66,7 @@ h1{
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
-  justify-content: center;
- 
+  /*justify-content: center;*/
 }
 
 .container2 {
@@ -198,6 +205,14 @@ h1{
 
 .fc-button-primary{
   background-color: rgb(65 194 157) !important;
+}
+
+.fc-prev-button:disabled{
+  opacity: 0.65 !important;
+}
+
+.fc-today-button:disabled{
+  opacity: 0.65 !important;
 }
 
 .fc-timegrid-event{

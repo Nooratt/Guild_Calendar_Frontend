@@ -10,7 +10,7 @@ const Month = () => {
 
     const [error, setError] = React.useState(false);
     const [response, setResponse] = React.useState([]);
-    const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'VK', 'Prodeko', 'FK'];
+    const guilds = ['AK', 'AS', 'Athene', 'IK', 'Inkubio', 'KIK', 'MK', 'PJK', 'PT', 'TIK', 'TF', 'Prodeko', 'FK'];
     const [filtered, setFiltered] = React.useState([]);
     const [checkedState, setCheckedState] = React.useState(new Array(guilds.length).fill(true));
 
@@ -140,6 +140,7 @@ const Month = () => {
                 fixedWeekCount={false}
                 eventOverlap={false}
                 events={filtered}
+                height={"auto"}
                 eventDisplay={"list-item"}
                 dayMaxEvents={3}
                 nowIndicator={true}
