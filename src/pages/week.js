@@ -138,6 +138,7 @@ const Week = () => {
         slotMaxTime={"24:00:00"}
         eventTimeFormat={{ hour: '2-digit', minute: '2-digit', hour12: false }}
         eventMinHeight='50'
+        dayMaxEventRows={3}
         firstDay={1}
         weekNumbers={true}
         weekText={"Week"}
@@ -153,6 +154,7 @@ const Week = () => {
         dayHeaderClassNames={"weekDay"}
         events={filtered}
         eventDisplay={"block"}
+        
 
         nowIndicator={true}
         eventClick={(e) => {

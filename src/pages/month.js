@@ -141,6 +141,7 @@ const Month = () => {
                 eventOverlap={false}
                 events={filtered}
                 eventDisplay={"list-item"}
+                dayMaxEvents={3}
                 nowIndicator={true}
                 eventClick={(e) => {
                     swal({

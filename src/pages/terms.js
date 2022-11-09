@@ -4,7 +4,7 @@ const Terms = () => {
 return (
 	<div className="termsDiv">
         
-        <h1>Terms and conditions</h1>
+        <h2>Terms and conditions</h2>
         
        
         <div className="multiline">

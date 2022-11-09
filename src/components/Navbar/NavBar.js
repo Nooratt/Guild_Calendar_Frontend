@@ -36,7 +36,6 @@ margin-right: 24px;
 
 export const NavBtnLink = styled(Link)`
 border-radius: 4px;
-background: #9b59b6;
 padding: 10px 22px;
 color: white;
 outline: none;

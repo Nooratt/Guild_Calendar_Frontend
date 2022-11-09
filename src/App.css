@@ -4,12 +4,14 @@
 .App {
   text-align: center;
   font-family: 'Oswald';
-  background-color: #190f23;
+  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-attachment: fixed;
 }
 body {
-  background-color: #190f23;
+  background-image: linear-gradient(to bottom right,#CFE6DF, #30BF98, #557AAA, #5A768E ) !important;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
 }
 
@@ -25,7 +27,6 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,6 +34,8 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed;
+  top: 0;
 }
 h1{
   font-size: 50px;
@@ -56,6 +59,7 @@ h1{
   flex-wrap: wrap;
   padding: 1%;
   justify-content: center;
+ 
 }
 
 .container2 {
@@ -69,17 +73,20 @@ h1{
   padding: 15px;
   margin:10px;
   border-radius: 10px;
-  background-color: rgba(52, 35, 70, 0.927);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+  
   
 }
 
 .guild-name{
   font-size: 30px;
+  opacity: 1 !important;
 }
 
 .TIK{
-  background-image: url('./images/TiK-logo.png') ;
+  background-image: url('./images/tik-black.jpg') ;
   background-position: 5%;
   background-repeat: no-repeat;
   background-size: 35px 35px;
@@ -92,7 +99,7 @@ h1{
 }
 
 .AS{
-  background-image: url('./images/aswhite.png');
+  background-image: url('./images/as-black.jpg');
   background-position: 5%;
   background-repeat: no-repeat;
   background-size: 35px 35px;
@@ -106,7 +113,7 @@ h1{
 }
 
 .FK{
-  background-image: url('./images/fk-logo.png');
+  background-image: url('./images/fk-black.jpg');
   background-position: 5%;
   background-repeat: no-repeat;
   background-size: 35px 35px;
@@ -155,7 +162,7 @@ h1{
   background-size: 35px 35px;
 }
 .TF{
-  background-image: url('./images/tf_logo.png');
+  background-image: url('./images/tf-black.jpg');
   background-position: 5%;
   background-repeat: no-repeat;
   background-size: 35px 35px;
@@ -185,12 +192,12 @@ h1{
 }
 
 .fc-day-today{
-  background-color: rgba(118, 103, 134, 0.927) !important;
+  background-color: rgba(255, 255, 255, 0.927) !important;
 }
 
 
 .fc-button-primary{
-  background-color: rgba(118, 103, 134, 0.927) !important;
+  background-color: rgb(65 194 157) !important;
 }
 
 .fc-timegrid-event{
@@ -231,15 +238,27 @@ h1{
 
 .swal-modal{
   width: 50%;
-  background-color:rgb(76, 68, 131);
+  background-color:rgb(255, 255, 255);
 }
 .swal-modal button{
-  background-color: #9b59b6;
+  background-color: rgb(65 194 157);
   font-family: 'Oswald';
 }
 .swal-text, .swal-title{
-  color:white;
+  color:rgb(0, 0, 0);
   font-family: 'Oswald';
   width: 90%;
 }
 
+button{
+  opacity: 1 !important;
+}
+
+[role=gridcell]{ 
+  height: 100px !important;
+  
+}
+.fc-view-harness, .fc-view-harness-active{
+  min-height:950px !important;
+  height: auto !important;
+}
