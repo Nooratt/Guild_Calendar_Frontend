@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 const Month = () => {
 
@@ -32,7 +32,6 @@ const Month = () => {
                             for (let i of result) {
                                 array = array.concat(Object.values(i)[0]);
                             }
-                            console.log("array ", array);
                             setResponse(array);
                             setFiltered(array);
                         }))
@@ -144,12 +143,12 @@ const Month = () => {
                 dayMaxEvents={3}
                 nowIndicator={true}
                 eventClick={(e) => {
-                    swal({
+                    Swal.fire({
                       title: e.event.title,
-                      text: "Starting from: " + e.event.start +
-                      "\n Description: " + e.event.extendedProps.description +
-                      "\n Location: " + e.event.extendedProps.location +
-                      "\n Organizer: " + e.event.extendedProps.guild
+                      html: "Starting from: " + e.event.start+ "<br>"+
+                        "<br>Description: " + e.event.extendedProps.description + "<br>"+ 
+                        "<br> Location: " + e.event.extendedProps.location + "<br>"+
+                        "<br>Organizer: " + e.event.extendedProps.guild
                     })               
                   }}
                 timeZone="Europe/Helsinki"

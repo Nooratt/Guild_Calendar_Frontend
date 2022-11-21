@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import momentTimezonePlugin from '@fullcalendar/moment-timezone';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 const Home = () => {
 
@@ -85,14 +85,12 @@ return (
         eventColor={list.color}
         nowIndicator
         eventClick={(e) => {
-          swal({
+          Swal.fire({
             title: e.event.title,
-            text: "Starting from: " + e.event.start +
-            "\n Description: " + e.event.extendedProps.description +
-            "\n Location: " + e.event.extendedProps.location +
-            "\n Organizer: " + e.event.extendedProps.guild
-
-          })
+            html:"<br>Description: " + e.event.extendedProps.description + "<br>"+ 
+            "<br> Location: " + e.event.extendedProps.location + "<br>"+
+            "<br>Organizer: " + e.event.extendedProps.guild
+        }) 
           
         }}
         timeZone="Europe/Helsinki"

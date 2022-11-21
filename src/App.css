@@ -181,11 +181,16 @@ h1{
   [class*="container"] {
     display: contents;
   }
+  [class*="App"] {
+    display: contents;
+  }
   [class*="fc-media-screen"] {
-    width:95%;
+    width:90%;
     
   }
 }
+
+
 .container > div{
   max-width:32%;
   min-width:400px;
@@ -229,15 +234,15 @@ h1{
 .sorting-list-item {
   float: left;
   clear: both;
-  color: white;
-  accent-color: #9b59b6;
+  color: black;
+  accent-color: rgb(65 194 157);;
 }
 .fc-timeGridDay-view, .fc-timegrid{
   border-radius: 4px;
 }
 
 .swal2-popup{
-  width: 50% !important;
+  width: 40% !important;
   background-color:rgb(255, 255, 255);
   color:rgb(0, 0, 0);
   font-family: 'Oswald' !important;
@@ -265,3 +270,8 @@ button{
   min-height:950px !important;
   height: auto !important;
 }
+.fc-prev-button, .fc-next-button{
+  margin-right:5px !important;
+  border-radius: 4px !important;
+}
+
